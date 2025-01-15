@@ -20,11 +20,6 @@ public class ExchangeRateController {
         this.exchangeRateService = exchangeRateService;
     }
 
-    @GetMapping("/to")
-    public String get() {
-        System.out.println("come");
-        return "HIIIIIIIIII";
-    }
 
     @GetMapping("/{currency}")
     public ResponseEntity<CurrencyRate[]> getTodayRate(@PathVariable String currency) {
